@@ -1,0 +1,20 @@
+{
+  "name": "crudprospectos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "prospects.js",
+  "scripts": {
+    "test": "git add -A && git commit -m \"Añadir cambios y mejoras en proyecto\" && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IngenioInnato/WSP-CRUDProspectos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IngenioInnato/WSP-CRUDProspectos/issues"
+  },
+  "homepage": "https://github.com/IngenioInnato/WSP-CRUDProspectos#readme"
+}
