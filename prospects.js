@@ -29,6 +29,7 @@ function getProspectData() {
     "telefono": document.getElementById("telefono").value,
     "tipo": document.getElementById("tipo").value,
     "review": document.getElementById("review").value,
+    "notas": document.getElementById("notas").value,
   }
   return data;
 }
@@ -39,6 +40,7 @@ function clearProspectData() {
     document.getElementById("telefono").value = "";
     document.getElementById("tipo").value = "";
     document.getElementById("review").value = "";
+    document.getElementById("notas").value = "";
 }
 // Show Message
 function showMessage() {
@@ -88,6 +90,7 @@ function readProspect() {
           <td role="cell">${el.acf.tipo}</td>
           <td role="cell">${el.acf.review}</td>
           <td role="cell">${el.acf.telefono}</td>
+          <td role="cell">${el.acf.notas}</td>
           <td role="cell">
           <button id="table__edit" data-edit="${i}" onclick="editProspect(${el.id}, ${i})" >Edita</button>
           <button id="table__remove" data-remove="${i}" onclick="deleteProspect(${el.id})">Remueve</button>
@@ -120,6 +123,7 @@ function editProspect(id, index) {
             <td role="cell">${el.acf.tipo}</td>
             <td role="cell">${el.acf.review}</td>
             <td role="cell">${el.acf.telefono}</td>
+            <td role="cell">${el.acf.notas}</td>
             <td role="cell">
             <button id="table__edit" data-edit="${i}"  onclick="editProspect(${el.id}, ${i})">Edita</button>
             <button id="table__remove" data-remove="${i}" onclick="deleteProspect(${el.id})">Remueve</button>
@@ -133,6 +137,7 @@ function editProspect(id, index) {
             <td role="cell"><input id="tipo-update"type="text" value="${el.acf.tipo}" placeholder="Tipo" /></td>
             <td role="cell"><input id="review-update"type="text" value="${el.acf.review}" placeholder="Review" /></td>
             <td role="cell"><input id="telefono-update"type="text" value="${el.acf.telefono}" placeholder="Telefono" /></td>
+            <td role="cell"><input id="notas-update"type="text" value="${el.acf.notas}" placeholder="Notas" /></td>
             <td role="cell">
             <button id="table__edit" data-edit="${i}" onclick="updateProspect(${el.id}, ${i})" >Actualiza</button>
             <button id="table__remove" data-remove="${i}" onclick="deleteProspect(${el.id})">Remueve</button>
@@ -151,6 +156,7 @@ function updateProspect(id, index) {
     "telefono": document.getElementById("telefono-update").value,
     "tipo": document.getElementById("tipo-update").value,
     "review": document.getElementById("review-update").value,
+    "notas": document.getElementById("notas-update").value,
   }
   console.log(`ID: ${id} \n INDEX: ${index}`);
   let apiURL = prospect.local + '\/wp-json\/wp\/v2\/prospect\/' + id;

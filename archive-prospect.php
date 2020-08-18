@@ -41,7 +41,12 @@
                       <label for="telefono" class="et_pb_contact_form_label">Teléfono</label>
                       <input type="text" id="telefono" class="input" value="" name="telefono" required placeholder="Teléfono">
                     </p>
-                    <p class="et_pb_contact_field et_pb_contact_field_5 et_pb_contact_field_half et_pb_contact_field_last">
+                    <p class="et_pb_contact_field et_pb_contact_field_5 et_pb_contact_field_half et_pb_contact_field_last" data-id="notas"
+                     >
+                      <label for="notas" class="et_pb_contact_form_label">Notas</label>
+                      <input type="text" id="notas" class="input" value="" name="notas" required placeholder="Notas">
+                    </p>
+                    <p class="et_pb_contact_field et_pb_contact_field_5 et_pb_contact_field_half">
                       <button id="send-prospect" type="submit" name="et_builder_submit_button" class="et_builder_submit_button et_pb_button">Añadir Prospecto</button>
                     </p>
                   </form>
@@ -117,7 +122,8 @@
 		td:nth-of-type(3):before { content: "Tipo: "; }
 		td:nth-of-type(4):before { content: "Fecha: "; }
 		td:nth-of-type(5):before { content: "Teléfono: "; }
-		td:nth-of-type(6):before { content: "Acciones: "; }
+		td:nth-of-type(6):before { content: "Notas: "; }
+		td:nth-of-type(7):before { content: "Acciones: "; }
 	}
 </style>
 <div class="entry-content" id="table__section">
@@ -142,8 +148,9 @@
                         <th role="columnheader">Nombre</th>
                         <th role="columnheader">E-mail</th>
                         <th role="columnheader">Tipo</th>
-                        <th role="columnheader">Fecha</th>
+                        <th role="columnheader">Seguimiento</th>
                         <th role="columnheader">Teléfono</th>
+                        <th role="columnheader">Notas</th>
                         <th role="columnheader">Acciones</th>
                       </tr>
                     </thead>
