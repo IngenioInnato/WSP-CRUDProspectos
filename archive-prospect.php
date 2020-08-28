@@ -5,7 +5,7 @@
       <div class="et_builder_inner_content et_pb_gutters3">
         <div class="et_pb_section et_pb_section_0 et_section_regular">
           <div class="et_pb_row et_pb_row_0">
-            <h2>Prospectos</h2>
+            <h2>Prospects</h2>
           </div>
           <div class="et_pb_row et_pb_row_0">
             <div
@@ -17,19 +17,19 @@
                 <div class="et_pb_contact">
                   <form class="et_pb_contact_form clearfix" onsubmit="(e) => e.preventDefault()">
                     <p class="et_pb_contact_field et_pb_contact_field_0 et_pb_contact_field_half">
-                      <label for="nombre" class="et_pb_contact_form_label">Nombre</label>
-                      <input type="text" id="nombre" class="input" value="" name="nombre" required placeholder="Nombre">
+                      <label for="nombre" class="et_pb_contact_form_label">Name</label>
+                      <input type="text" id="nombre" class="input" value="" name="nombre" required placeholder="Name">
                     </p>
                     <p class="et_pb_contact_field et_pb_contact_field_1 et_pb_contact_field_half et_pb_contact_field_last">
                       <label for="email" class="et_pb_contact_form_label">E-mail</label>
                       <input type="text" id="email" class="input" value="" name="email" placeholder="E-mail">
                     </p>
                     <p class="et_pb_contact_field et_pb_contact_field_2 et_pb_contact_field_half">
-                      <label for="tipo" class="et_pb_contact_form_label">Tipo</label>
+                      <label for="tipo" class="et_pb_contact_form_label">Type</label>
                       <select id="tipo" class="et_pb_contact_select input" name="Tipo" required>
-                        <option value="">Tipo</option>
-                        <option value="Cliente">Cliente</option>
-                        <option value="Consultor">Consultor</option>
+                        <option value="">Type</option>
+                        <option value="Cliente">Client</option>
+                        <option value="Consultor">Consultant</option>
                       </select>
                     </p>
                     <p class="et_pb_contact_field et_pb_contact_field_3 et_pb_contact_field_half et_pb_contact_field_last">
@@ -38,23 +38,23 @@
                     </p>
                     <p class="et_pb_contact_field et_pb_contact_field_4 et_pb_contact_field_half" data-id="telefono"
                      >
-                      <label for="telefono" class="et_pb_contact_form_label">Teléfono</label>
-                      <input type="text" id="telefono" class="input" value="" name="telefono" required placeholder="Teléfono">
+                      <label for="telefono" class="et_pb_contact_form_label">Phone</label>
+                      <input type="text" id="telefono" class="input" value="" name="telefono" required placeholder="Phone">
                     </p>
                     <p class="et_pb_contact_field et_pb_contact_field_5 et_pb_contact_field_half et_pb_contact_field_last" data-id="notas"
                      >
-                      <label for="notas" class="et_pb_contact_form_label">Notas</label>
-                      <input type="text" id="notas" class="input" value="" name="notas" required placeholder="Notas">
+                      <label for="notas" class="et_pb_contact_form_label">Notes</label>
+                      <input type="text" id="notas" class="input" value="" name="notas" required placeholder="Notes">
                     </p>
                     <p class="et_pb_contact_field et_pb_contact_field_5 et_pb_contact_field_half">
-                      <button id="send-prospect" type="submit" name="et_builder_submit_button" class="et_builder_submit_button et_pb_button">Añadir Prospecto</button>
+                      <button id="send-prospect" type="submit" name="et_builder_submit_button" class="et_builder_submit_button et_pb_button">Add Prospect</button>
                     </p>
                   </form>
                 </div> <!-- .et_pb_contact -->
               </div> <!-- .et_pb_contact_form_container -->
             </div> <!-- .et_pb_column -->
           </div>
-          <div class="et_pb_row et_pb_row_0" id="prospect__message" style="background: green;text-align: center;color: white;display:none;"><h5 style="padding: 0;color: #fff;">Añadido prospecto correctamente</h5>
+          <div class="et_pb_row et_pb_row_0" id="prospect__message" style="background: green;text-align: center;color: white;display:none;"><h5 style="padding: 0;color: #fff;">Added prospectus successfully</h5>
           </div>
  <!-- .et_pb_row -->
         </div> <!-- .et_pb_section -->
@@ -145,13 +145,13 @@
                   <table role="table" id="table">
                     <thead role="rowgroup">
                       <tr role="row">
-                        <th role="columnheader">Nombre</th>
+                        <th role="columnheader">Name</th>
                         <th role="columnheader">E-mail</th>
-                        <th role="columnheader">Tipo</th>
-                        <th role="columnheader">Seguimiento</th>
-                        <th role="columnheader">Teléfono</th>
-                        <th role="columnheader">Notas</th>
-                        <th role="columnheader">Acciones</th>
+                        <th role="columnheader">Type</th>
+                        <th role="columnheader">Review</th>
+                        <th role="columnheader">Phone</th>
+                        <th role="columnheader">Notes</th>
+                        <th role="columnheader">Actions</th>
                       </tr>
                     </thead>
                     <tbody role="rowgroup" id="table__content">

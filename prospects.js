@@ -92,14 +92,14 @@ function readProspect() {
           <td role="cell">${el.acf.telefono}</td>
           <td role="cell">${el.acf.notas}</td>
           <td role="cell">
-          <button id="table__edit" data-edit="${i}" onclick="editProspect(${el.id}, ${i})" >Edita</button>
-          <button id="table__remove" data-remove="${i}" onclick="deleteProspect(${el.id})">Remueve</button>
+          <button id="table__edit" data-edit="${i}" onclick="editProspect(${el.id}, ${i})" >Edit</button>
+          <button id="table__remove" data-remove="${i}" onclick="deleteProspect(${el.id})">Remove</button>
           </td>
           </tr>`;
           (longitud - 1 == i) ? content.innerHTML = structureTable : '';
         });
       } else {
-        content.innerHTML = "<h4>Sin Resultados</h4>";
+        content.innerHTML = "<h4>Without results</h4>";
       }
     },
   })
@@ -125,8 +125,8 @@ function editProspect(id, index) {
             <td role="cell">${el.acf.telefono}</td>
             <td role="cell">${el.acf.notas}</td>
             <td role="cell">
-            <button id="table__edit" data-edit="${i}"  onclick="editProspect(${el.id}, ${i})">Edita</button>
-            <button id="table__remove" data-remove="${i}" onclick="deleteProspect(${el.id})">Remueve</button>
+            <button id="table__edit" data-edit="${i}"  onclick="editProspect(${el.id}, ${i})">Edit</button>
+            <button id="table__remove" data-remove="${i}" onclick="deleteProspect(${el.id})">Remove</button>
             </td>
           </tr>`;
         } else {
@@ -139,8 +139,8 @@ function editProspect(id, index) {
             <td role="cell"><input id="telefono-update"type="text" value="${el.acf.telefono}" placeholder="Telefono" /></td>
             <td role="cell"><input id="notas-update"type="text" value="${el.acf.notas}" placeholder="Notas" /></td>
             <td role="cell">
-            <button id="table__edit" data-edit="${i}" onclick="updateProspect(${el.id}, ${i})" >Actualiza</button>
-            <button id="table__remove" data-remove="${i}" onclick="deleteProspect(${el.id})">Remueve</button>
+            <button id="table__edit" data-edit="${i}" onclick="updateProspect(${el.id}, ${i})" >Update</button>
+            <button id="table__remove" data-remove="${i}" onclick="deleteProspect(${el.id})">Remove</button>
             </td>
           </tr>`;
         }
@@ -158,13 +158,15 @@ function updateProspect(id, index) {
     "review": document.getElementById("review-update").value,
     "notas": document.getElementById("notas-update").value,
   }
-  console.log(`ID: ${id} \n INDEX: ${index}`);
+  // console.log(`ID: ${id} \n INDEX: ${index}`);
   let apiURL = prospect.local + '\/wp-json\/wp\/v2\/prospect\/' + id;
   ajax({
     "url": apiURL,
     "method": 'POST',
     "nonce": prospect.nonce,
     "data": {
+      "title": data.nombre,
+      "status": "publish",
       "fields": data
     },
     done: () => readProspect() 
